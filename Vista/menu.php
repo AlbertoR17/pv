@@ -6,6 +6,7 @@
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inventario <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
             <li><a href="agregaproducto.php">Agregar productos</a></li>
+            <li><a href="agregarexistencia.php">Agregar existencia</a></li>
             <li><a href="productos.php">Productos</a></li>
             <li><a href="existencias.php">Existencias</a></li>
 
