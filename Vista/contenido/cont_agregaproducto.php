@@ -16,9 +16,26 @@
     <div class="form-group"><label class="col-sm-2 control-label">Descripción</label>
         <div class="col-sm-10"><input required type="text" name="descripcion" onkeypress="return validaletra(event)" maxlength="100" value="" class="form-control"></div>
     </div>
-    <div class="form-group"><label class="col-sm-2 control-label">Categoria</label>
+    <!--<div class="form-group"><label class="col-sm-2 control-label">Categoria</label>
         <div class="col-sm-10"><input required type="text" name="cat" onkeypress="return validaletra(event)" value="" class="form-control"></div>
+    </div>-->
+    <div class="form-group"><label class="col-sm-2 control-label">Categoria</label>
+        <div class="col-sm-10">
+          <select class="form-control" required name="cat">
+            <option></option>
+            <option value="Lacteos">Lacteos</option>
+            <option value="Panaderia">Panaderia</option>
+            <option value="Botanas">Botanas</option>
+            <option value="Bebidas">Bebidas</option>
+            <option value="Frutas y Verduras">Frutas y Verduras</option>
+            <option value="Carnes">Carnes</option>
+            <option value="Detergentes">Detergentes</option>
+            <option value="Enlatados">Enlatados</option>
+            <option value="A granel">A granel</option>           
+          </select>
+        </div>
     </div>
+
     <!-- <div class="form-group"><label class="col-sm-2 control-label">Cantidad</label>
         <div class="col-sm-10"><input type="text" name="cant"  value="" class="form-control"></div>
     </div> 

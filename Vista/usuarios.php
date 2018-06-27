@@ -1,4 +1,3 @@
-<?php require('../Controlador/conec.php'); ?>
 <html>
 
 
@@ -23,7 +22,7 @@
                 <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                     <i class="fa fa-reorder"></i>
                 </button>
-                <a href="#" class="navbar-brand">ABARROTES BALFI</a>
+                <a href="#" class="navbar-brand">ABARROTES LINDA</a>
             </div>
             <div class="navbar-collapse collapse" id="navbar">
                 <?php include('menu.php') ?>
@@ -36,7 +35,7 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                     <!-- CONTENIDO DE LA PAGINA -->
-                        <?php include('contenido/cont_agregaexistencias.php'); ?>
+                        <?php include('contenido/cont_usuario.php'); ?>
                     <!-- _______________________ -->
                     </div>
                 </div>    

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Punto de venta | Linda</title>
+    <title>Punto de venta | BALFI</title>
     
 <?php include('css.php'); ?>
 </head>
@@ -22,7 +22,7 @@
                 <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                     <i class="fa fa-reorder"></i>
                 </button>
-                <a href="#" class="navbar-brand">ABARROTES LINDA</a>
+                <a href="#" class="navbar-brand">ABARROTES BALFI</a>
             </div>
             <div class="navbar-collapse collapse" id="navbar">
                 <?php include('menu.php') ?>
@@ -45,7 +45,7 @@
             </div>
         <div class="footer">
             <div>
-                <strong>Copyright</strong> Abarrotes &copy; <?php echo date('Y') ?>
+                <strong>Copyright</strong> Abarrotes BALFI &copy; <?php echo date('Y') ?>
             </div>
         </div>
 
