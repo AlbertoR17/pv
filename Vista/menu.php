@@ -2,6 +2,9 @@
     <li class="">
         <a aria-expanded="false" role="button" href="venta.php">Venta</a>
     </li>
+    <li class="">
+        <a aria-expanded="false" role="button" href="productos.php">Inventario 2</a>
+    </li>
     <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inventario <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">

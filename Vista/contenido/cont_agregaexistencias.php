@@ -22,7 +22,7 @@
                           </select></div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Cantidad</label>
-        <div class="col-sm-10"><input required type="text" name="cantidad" onkeypress="return validanum(event)" value="" class="form-control"></div>
+        <div class="col-sm-10"><input required type="number" name="cantidad" value="" class="form-control"></div>
     </div>
     
     <!-- <div class="form-group"><label class="col-sm-2 control-label">Cantidad</label>

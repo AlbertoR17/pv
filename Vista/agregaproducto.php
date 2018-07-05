@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Punto de venta | BALFI</title>
-    
+   
+
 <?php include('css.php'); ?>
 </head>
 
@@ -54,6 +55,7 @@
 
 
 <?php include('js.php'); ?>
+
 
 </body>
 

@@ -73,6 +73,8 @@
     <!-- Dual Listbox -->
     <script src="../Content/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
+    <script src="../Content/alertifyjs/alertify.js"></script>
+
     <script>
         $(document).ready(function(){
 
