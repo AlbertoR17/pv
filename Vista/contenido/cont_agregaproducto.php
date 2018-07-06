@@ -5,16 +5,16 @@
 <div class="ibox-content">
     <form class="form-horizontal" method="post" action="../Controlador/regProducto.php">
       <div class="form-group"><label class="col-sm-2 control-label">Codigo producto</label>
-        <div class="col-sm-10"><input required type="text" onkeypress="return validanum(event)" name="codpro"  value="" class="form-control"></div>
+        <div class="col-sm-10"><input type="number" required   name="codpro" onkeypress="return validanum(event)" value="" class="form-control" autofocus></div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Nombre</label>
-        <div class="col-sm-10"><input required type="text" name="nombre" onkeypress="return validaletra(event)" value="" class="form-control"></div>
+        <div class="col-sm-10"><input required type="text" name="nombre" value="" class="form-control"></div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Precio unitario</label>
-        <div class="col-sm-10"><input required type="text" name="precio" onkeypress="return validanum(event)"  value="" class="form-control"></div>
+        <div class="col-sm-10"><input required type="number" min="0.50" step="0.01" name="precio" value="" class="form-control"></div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Descripción</label>
-        <div class="col-sm-10"><input required type="text" name="descripcion" onkeypress="return validaletra(event)" maxlength="100" value="" class="form-control"></div>
+        <div class="col-sm-10"><input required type="text" name="descripcion" maxlength="100" value="" class="form-control"></div>
     </div>
     <!--<div class="form-group"><label class="col-sm-2 control-label">Categoria</label>
         <div class="col-sm-10"><input required type="text" name="cat" onkeypress="return validaletra(event)" value="" class="form-control"></div>
@@ -96,3 +96,13 @@
 }
 
       </script>
+
+    <!-- <script type="text/javascript">
+function check_text(input) {  
+    if (input.validity.patternMismatch){  
+        input.setCustomValidity("Debe ingresar al menos 3 LETRAS");  
+    }  
+    else {  
+        input.setCustomValidity("");  
+    }                 
+}  </script>-->

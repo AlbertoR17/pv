@@ -28,17 +28,17 @@ mysqli_close($con);
         <div class="col-sm-10"><input required type="text" name="idProducto"  value="<?php echo $idProd; ?>" class="form-control" style="display: none"></div>
     </div>
 
-      <div class="form-group"><label class="col-sm-2 control-label">Codigo producto</label>
-        <div class="col-sm-10"><input required type="text" onkeypress="return validanum(event)" name="codpro"  value="<?php echo $codigoPro; ?>" class="form-control"></div>
+      <div class="form-group"><label class="col-sm-2 control-label" >Codigo producto</label>
+        <div class="col-sm-10"><input required type="number" onkeypress="return validanum(event)" name="codpro"  value="<?php echo $codigoPro; ?>" class="form-control" autofocus></div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Nombre</label>
         <div class="col-sm-10"><input required type="text" name="nombre" onkeypress="return validaletra(event)" value="<?php echo $nombre; ?>" class="form-control"></div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Precio unitario</label>
-        <div class="col-sm-10"><input required type="text" name="precio" onkeypress="return validanum(event)"  value="<?php echo $precio; ?>" class="form-control"></div>
+        <div class="col-sm-10"><input required type="number" min="0.50" step="0.01" name="precio"   value="<?php echo $precio; ?>" class="form-control"></div>
     </div>
     <div class="form-group"><label class="col-sm-2 control-label">Descripción</label>
-        <div class="col-sm-10"><input required type="text" name="descripcion" onkeypress="return validaletra(event)" maxlength="100" value="<?php echo $des; ?>" class="form-control"></div>
+        <div class="col-sm-10"><input required type="text" name="descripcion" maxlength="100" value="<?php echo $des; ?>" class="form-control"></div>
     </div>
 
     <div class="form-group"><label class="col-sm-2 control-label">Categoria</label>

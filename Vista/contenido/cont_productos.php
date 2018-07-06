@@ -1,11 +1,12 @@
 <div class="ibox-title">
-                            <h5>Productos</h5>
+                            <h5>Inventario</h5>
 
                             <div class="ibox-tools">
                                
                             </div>
                         </div>
                         <div class="ibox-content">
+                            <a class="btn btn-primary" href="agregaproducto.php">Agregar Nuevo Producto</a>
                             <input type="text" class="form-control input-sm m-b-xs" id="filter"
                                    placeholder="Buscar...">
 
@@ -16,9 +17,11 @@
                                     <th >Codigo</th>
                                     <th >Nombre</th>
                                     <th >Precio</th>
-                                    <th >Descripción</th>
+                                    <!-- <th >Descripción</th> -->
                                     <!-- <th >Imagen</th> -->
                                     <th >Categoria</th>
+                                    <th>Existencia</th>
+                                    <th>Acciones</th>
                                 </tr>
                                 </thead>
                                 <tbody>
