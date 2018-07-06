@@ -15,7 +15,7 @@
     <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Cortes <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
-            <li><a href="#">Realizar corte</a></li>
+            <li><a href="Corte.php">Realizar corte</a></li>
         </ul>
     </li>
     <li class="dropdown">
