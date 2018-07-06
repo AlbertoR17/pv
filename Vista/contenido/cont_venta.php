@@ -134,7 +134,7 @@
             //dataType: 'json',
             type: "POST",
             data: {codigo:cod},
-            success: function(json){
+            success: function(data){
                
               //$("#idProducto").val();
               //$("#codigo").val(data);
