@@ -3,9 +3,9 @@
         <a aria-expanded="false" role="button" href="venta.php">Venta</a>
     </li>
     <li class="">
-        <a aria-expanded="false" role="button" href="productos.php">Inventario 2</a>
+        <a aria-expanded="false" role="button" href="productos.php">Inventario</a>
     </li>
-    <li class="dropdown">
+    <!-- <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inventario <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
             <li><a href="agregaproducto.php">Agregar productos</a></li>
@@ -14,7 +14,7 @@
             <li><a href="existencias.php">Existencias</a></li>
 
         </ul>
-    </li>
+    </li> -->
     <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Cortes <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
