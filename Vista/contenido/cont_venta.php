@@ -131,20 +131,16 @@
       
        $.ajax({
             url: "busca_producto.php",
-            //dataType: 'json',
+           // dataType: 'json',
             type: "POST",
+            dataType: 'json',
             data: {codigo:cod},
             success: function(data){
-               
-              //$("#idProducto").val();
-              //$("#codigo").val(data);
-              $("#nombre").val(data);
-              $("#precioU").val(data);
-              $("#descripcion").val(data);
-             // $("#imagen").val();
-              //$("#cat").val();
-              
-             alert(data);
+            
+              $("#nombre").val(data.Nombre);
+              $("#precioU").val(data.Precio_Unitario);
+              $("#descripcion").val(data.Descripcion);
+             
             }
              
         });
@@ -156,7 +152,7 @@
          
             var articulo=$("#codigo").val();
              var produc=$("#nombre").val();
-            var descripcion=$("descripcion").val();
+            var descripcion=$("#descripcion").val();
             var precio=$("#precioU").val();
             var cantidad=$("#cantidad").val();
             var monto=cantidad*precio;
