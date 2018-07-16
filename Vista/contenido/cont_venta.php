@@ -20,11 +20,15 @@
                     <input type="text" id="codigo"  value="" placeholder="Codigo del producto" class="form-control" onchange='buscar_articulo();'>
                       <br>
                     <label class="control-label" for="order_id">Producto</label>
-                    <input type="text" id="nombre"  value=""  placeholder="Producto" class="form-control nombre">
+                    <input type="text" id="nombre"  value=""  placeholder="Producto" class="form-control nombre" readonly="">
                     <br>
                    <label class="control-label" for="status">Precio</label>
-                    <input type="text" id="precioU" value="" placeholder="Precio" class="form-control">
+                    <input type="text" id="precioU" value="" placeholder="Precio" class="form-control" readonly="">
                     <br>
+
+                    <label class="control-label" for="status">Cantidad</label>
+                    <input type="number" id="cantidad" value="" placeholder="Cantidad" class="form-control" required="required">
+                     <br>
                     <label class="control-label" for="order_id">Unidad de medida</label>
                     <select data-placeholder="Unidad de medida" id="lugs" class="chosen-select col-sm-10" style="width:350px;" >
 
@@ -32,10 +36,7 @@
                         <option value="Aconchi">KG</option>
                     </select>
                     <br>
-                    <br>
-                    <label class="control-label" for="status">Cantidad</label>
-                    <input type="number" id="cantidad" value="" placeholder="Cantidad" class="form-control">
-                     <br>
+                    
                 </div>
                  </div>
                  <div class="col-md-6">
@@ -84,7 +85,7 @@
             </div>
         </div>
         <div class="form-group">
-            <input type="submit"  value="Terminar venta" class="btn btn-info form-control lazur-bg ">
+            <input type="submit"  value="Terminar venta" class="btn btn-info form-control lazur-bg " onclick="Venta();">
         </div>
         <div class="ibox float-e-margins">
             <div class="ibox-title">
@@ -136,11 +137,11 @@
             dataType: 'json',
             data: {codigo:cod},
             success: function(data){
-            
+             
               $("#nombre").val(data.Nombre);
               $("#precioU").val(data.Precio_Unitario);
               $("#descripcion").val(data.Descripcion);
-             
+
             }
              
         });
@@ -156,7 +157,7 @@
             var precio=$("#precioU").val();
             var cantidad=$("#cantidad").val();
             var monto=cantidad*precio;
-            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs Delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
+            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
             $("#codigo").val("");
             $("#cantidad").val("");
             $("#precioU").val("");
@@ -191,11 +192,81 @@
          $(function(){
            $(document).ready(function(){
          // Evento que selecciona la fila y la elimina
-        $(document).on("click",".Delete",function(){
+        $(document).on("click",".delete",function(){
         var parent = $(this).parents().parents().get(0);
       $(parent).remove();
            //resumen();
         });
        });
         });
+   function Venta(){
+  $(document).ready(function(){
+             
+           
+          var suma=$(".suma").html();
+          var sum= parseFloat(suma);
+          alert(sum);
+          $.ajax({
+            url: "procesar.php",
+           // dataType: 'json',
+            type: "POST",
+            dataType: 'json',
+            data: {suma:sum},
+            success: function(data){
+              
+            }
+             
+        });
+          inser();
+          
+          
+                         /*$(".suma").html("");
+                         $("#pago").val("");
+                         $(".cambio").html("");*/
+                          });
+                        }
+
+    function inser(){
+   $(document).ready(function(){
+         var yapuso=0;
+          $('#productos > tbody > tr').each(function(){
+           	
+                var descripcion=$(this).find('td').eq(1).html();
+                var proc = $(this).find('td').eq(0).html();
+                var can = $(this).find('td').eq(3).html();
+                var preciou  = $(this).find('td').eq(2).html();
+                var monto=$(this).find('td').eq(4).html();
+               
+                         $.ajax({
+                             beforeSend: function(){
+                              },
+                             url: 'procesar_venta.php',
+                             type: 'POST',
+                             data: '&proc='+proc+'&cantidad='+can+'&preciou='+preciou+'&descripcion='+descripcion,
+                             success: function(x){
+                                  alert(x)
+                                  var n = noty({
+                                   text: "Procesando venta...  articulo actual: "+proc,
+                                   theme: 'relax',
+                                   layout: 'topLeft',
+                                   type: 'success',
+                                   timeout: 2000,
+                                  });
+                               /*if(yapuso==0){
+                               llena_ticket_archivo(cod,can,preciou,descripcion_art,yapuso,monto,$("#totales").html(),$("#paga_con").val(),$("#el_cambio").val(),n_tic);
+                               yapuso=1;
+                               }else{
+                               llena_ticket_archivo(cod,can,preciou,descripcion_art,yapuso,monto,$("#totales").html(),$("#paga_con").val(),$("#el_cambio").val(),n_tic);
+                               }*/
+                              },
+                             error: function(jqXHR,estado,error){
+                               $("#errores").html('Error... ');
+                              }
+                             });
+                           });
+          
+      });
+           
+           
+         }
 </script>
