@@ -44,7 +44,7 @@
 
                     <label class="control-label" for="status">Imagen del producto</label>
                     <div class="form-control" style="max-width: 250px;min-width: 250px; max-height: 210px;min-height: 210px">
-                        <center><img style="max-width: 150px;min-width: 150px; max-height: 200px;min-height: 200px" id="imagen"></center>
+                        <center><img style="max-width: 150px;min-width: 150px; max-height: 200px;min-height: 200px" id="imagen" src="../Content/Productos/.jpg"></center>
                     </div>
                     <br>
                     <label class="control-label" for="order_id">Descripción del producto</label>
@@ -141,6 +141,7 @@
               $("#nombre").val(data.Nombre);
               $("#precioU").val(data.Precio_Unitario);
               $("#descripcion").val(data.Descripcion);
+              $("#imagen").attr("src","../Content/Productos"+data.Imagen);
 
             }
              
