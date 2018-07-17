@@ -22,7 +22,7 @@
                 <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                     <i class="fa fa-reorder"></i>
                 </button>
-                <a href="#" class="navbar-brand">ABARROTES LINDA</a>
+                <a href="#" class="navbar-brand">ABARROTES BALFI</a>
             </div>
             <div class="navbar-collapse collapse" id="navbar">
                 <?php include('menu.php') ?>
