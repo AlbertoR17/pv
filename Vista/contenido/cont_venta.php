@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="form-group">
-            <input type="submit"  value="Terminar venta" class="btn btn-info form-control lazur-bg " onclick="Venta();">
+            <input type="submit"  value="Terminar venta" class="btn btn-info form-control lazur-bg " onclick="Venta();" disabled="disabled" id="terminar">
         </div>
         <div class="ibox float-e-margins">
             <div class="ibox-title">
@@ -182,7 +182,7 @@
            });
          var suma = data.reduce(function(a,b){ return a+b; },0);
          $("#suma").html(suma);
-           
+          $("#terminar").attr("disabled",false);
       });
            
            
