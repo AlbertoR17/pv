@@ -54,14 +54,7 @@
     <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Cambiar</a>
 </div> 
 </div>
-    </div>
-    <div class="form-group col-lg-4 fileinput fileinput-new" data-provides="fileinput">
-                <span class="btn btn-primary btn-file"><span class="fileinput-new">Seleccionar imagen</span>
-                <span class="fileinput-exists">Cambiar</span>
-                <input required type="file" name="imagen"></span>
-                <span class="fileinput-filename"></span>
-                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a>
-            </div>-->
+    </div>-->
     <div class="form-group">     
         <center>   
         <div class="col-sm-12 "><input type="submit"  value="Guardar producto" class=" btn btn-primary"></div>

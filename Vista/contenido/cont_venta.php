@@ -18,7 +18,6 @@
                     
                     <label class="control-label" for="order_id">Codigo del Producto</label>
                     <input type="text" id="codigo"  value="" placeholder="Codigo del producto" class="form-control" onchange='buscar_articulo();'>
-                    <input type="text" id="IdPro"  value="" class="form-control" style="display: none;">
                       <br>
                     <label class="control-label" for="order_id">Producto</label>
                     <input type="text" id="nombre"  value=""  placeholder="Producto" class="form-control nombre" readonly="">
@@ -98,18 +97,18 @@
                     <thead>
                         <tr>
 
-                            
+
                             <th >Producto</th>
                             <th >Descripción</th>
                             <th >Precio Unitario</th>
                             <th >Cantidad</th>
                             <th >Total del producto</th>
-                            <th style="display: none;" >Id</th>
+
                             <th class="text-right">Action</th>
 
                         </tr>
                     </thead>
-                    <tbody id="tbody">
+                    <tbody>
                        
                     </tbody>
                     <tfoot>
@@ -138,21 +137,13 @@
             dataType: 'json',
             data: {codigo:cod},
             success: function(data){
-             //if (true) {alert("producto no encotrado")}
+             
               $("#nombre").val(data.Nombre);
               $("#precioU").val(data.Precio_Unitario);
               $("#descripcion").val(data.Descripcion);
-              $("#IdPro").val(data.Id_Producto);
-              if (data.Imagen!="") {
-               $("#imagen").attr('src','../Content/Productos/'+data.Imagen+'.jpg');
-              }
-              else{
-                 $("#imagen").attr('src','../Content/Productos/nohay.jpg');
-              }
-               
-              
+              $("#imagen").attr('src','../Content/Productos/'+data.Imagen+'.jpg');
+                   alert(data.Imagen)
             }
-            
              
         });
        
@@ -160,21 +151,20 @@
          }
  function agregar(){
    $(document).ready(function(){
-           
+         
             var articulo=$("#codigo").val();
              var produc=$("#nombre").val();
             var descripcion=$("#descripcion").val();
             var precio=$("#precioU").val();
             var cantidad=$("#cantidad").val();
-            var  id = $("#IdPro").val();
             var monto=cantidad*precio;
-            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center' style='display:none'>"+id+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs eliminar'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
+            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs delete'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
             $("#codigo").val("");
             $("#cantidad").val("");
             $("#precioU").val("");
             $("#nombre").val("");
              $("#descripcion").val("");
-            $("#imagen").attr("");
+            //$("#codigo").focus();
 
              var data = [];
           $("td.total").each(function(){
@@ -187,17 +177,6 @@
            
            
          }
-   $(function(){
-  $(document).ready(function(){
-  // Evento que selecciona la fila y la elimina
-  $(document).on("click",".eliminar",function(){
-  var parent = $(this).parents().parents().get(0);
-      $(parent).remove();
-        
-        });
-       });
-        });
-
     function cambio(){
    $(document).ready(function(){
          
@@ -211,14 +190,23 @@
            
          }
 
-        
+         $(function(){
+           $(document).ready(function(){
+         // Evento que selecciona la fila y la elimina
+        $(document).on("click",".delete",function(){
+        var parent = $(this).parents().parents().get(0);
+      $(parent).remove();
+           //resumen();
+        });
+       });
+        });
    function Venta(){
   $(document).ready(function(){
              
            
           var suma=$(".suma").html();
           var sum= parseFloat(suma);
-        
+          alert(sum);
           $.ajax({
             url: "procesar.php",
            // dataType: 'json',
@@ -243,7 +231,7 @@
    $(document).ready(function(){
          var yapuso=0;
           $('#productos > tbody > tr').each(function(){
-               	var id=$(this).find('td').eq(5).html();
+           	
                 var descripcion=$(this).find('td').eq(1).html();
                 var proc = $(this).find('td').eq(0).html();
                 var can = $(this).find('td').eq(3).html();
@@ -255,9 +243,9 @@
                               },
                              url: 'procesar_venta.php',
                              type: 'POST',
-                             data: '&proc='+proc+'&cantidad='+can+'&preciou='+preciou+'&descripcion='+descripcion+'&id='+id,
+                             data: '&proc='+proc+'&cantidad='+can+'&preciou='+preciou+'&descripcion='+descripcion,
                              success: function(x){
-                                  
+                                  alert(x)
                                   var n = noty({
                                    text: "Procesando venta...  articulo actual: "+proc,
                                    theme: 'relax',
@@ -277,15 +265,9 @@
                               }
                              });
                            });
-          alert("venta Realizada");
-          $(".suma").html("");
-          $("#pago").val("");
-          $(".cambio").html("");
-          $("#tbody").empty();
           
       });
            
            
          }
-         
 </script>

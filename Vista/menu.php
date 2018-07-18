@@ -1,9 +1,9 @@
 <ul class="nav navbar-nav">
     <li class="">
-        <a aria-expanded="false" role="button" href="venta.php"><i class="fa fa-laptop"></i> Venta</a>
+        <a aria-expanded="false" role="button" href="venta.php">Venta</a>
     </li>
     <li class="">
-        <a aria-expanded="false" role="button" href="productos.php"><i class="fa fa-th-large"></i> Inventario</a>
+        <a aria-expanded="false" role="button" href="productos.php">Inventario</a>
     </li>
     <!-- <li class="dropdown">
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Inventario <span class="caret"></span></a>
@@ -16,16 +16,15 @@
         </ul>
     </li> -->
     <li class="dropdown">
-        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-usd"></i> Cortes <span class="caret"></span></a>
+        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Cortes <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
-            <li><a href="Corte.php"><i class="fa fa-calculator"></i> Realizar corte</a></li>
-            <li><a href="Corte.php"><i class="fa fa-history"></i> Historial de cortes</a></li>
+            <li><a href="Corte.php">Realizar corte</a></li>
         </ul>
     </li>
     <li class="dropdown">
-        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Usuarios <span class="caret"></span></a>
+        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Usuarios <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
-            <li><a href="usuarios.php"><i class="fa fa-user"></i> Usuarios</a></li>
+            <li><a href="usuarios.php">Usuarios</a></li>
         </ul>
     </li>
                     <!-- <li class="dropdown">

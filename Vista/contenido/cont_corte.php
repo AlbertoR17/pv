@@ -1,153 +1,6 @@
-<div class="ibox-content">
-	<fieldset>
-		<legend>Corte</legend>
-
-		<label class="col-sm-2 control-label">Fecha</label>
-		<div class="form-group col-sm-10" id="data_1">
-			<div class="input-group ">
-
-				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-				<input type="text" readonly name="fecha" id="fecha" value = "<?php
-				date_default_timezone_set("America/Mexico_City");
-				echo date('m/d/Y'); ?>" class="form-control" >
-
-			</div>
-		</div>
-		<label class="col-sm-2 control-label">Total de ventas</label>
-		<div class="form-group col-sm-10" id="data_1">
-			<div class="input-group ">
-
-				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" readonly name="nombre" maxlength="60"  class="form-control">
-
-			</div>
-		</div>
-		<label class="col-sm-2 control-label">Cantidad de caja</label>
-		<div class="form-group col-sm-10" id="data_1">
-			<div class="input-group ">
-
-				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" name="nombre" maxlength="60"  class="form-control">
-
-			</div>
-		</div>
-
-		<div class="form-group pull-right" id="data_1">
-			<div class="input-group "><br>
-				<input type="submit" class=" btn btn-primary" value="Terminar corte">
-			</div>
-		</div>
-		
-		
-		
-
-
-
-
-
-
-
-
-
-	</fieldset>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Content Wrapper. Contains page content -->
-      <!--<div class="content-wrapper">
-        <!-- Content Header (Page header) 
+  <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
              Corte de Caja 
@@ -156,10 +9,10 @@
           
         </section>
 
-        <!-- Main content 
+        <!-- Main content -->
         <section class="content">
 
-          <!-- Your Page Content Here 
+          <!-- Your Page Content Here -->
           <div class='row'>
           <div class='col-md-6'>
           <div class='box box-primary'>
@@ -178,7 +31,7 @@
                     <span class='fe'></span>
                     <input type='hidden'  class='form-control' id='fi' value=''>
                     <input type="hidden"  class='form-control' id='ff' value=''>
-            </div><!-- /.form group 
+            </div><!-- /.form group -->
           </div>
 
           </div>
@@ -224,7 +77,7 @@
         </div>
         </div>
         </div>
-        </section><!-- /.content 
+        </section><!-- /.content -->
 
         <div class="modal fade" id ="modal_detalle_venta" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -239,8 +92,8 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
           </div>
-        </div> /.modal-content 
-      </div><!-- /.modal-dialog 
-    </div><!-- /.modal 
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
          </div><!-- /.content-wrapper -->
