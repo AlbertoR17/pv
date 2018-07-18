@@ -54,7 +54,7 @@
                 </div>
                 </div>        
   
-                <input type="submit"  value="Agregar" class="btn btn-info form-control lazur-bg " onclick="agregar()">
+                <input type="submit"  value="Agregar" class="btn btn-info form-control lazur-bg " onclick="agregar()" disabled="disabled" id="ven">
                 </div>
 
             </div>
@@ -149,7 +149,7 @@
               else{
                  $("#imagen").attr('src','../Content/Productos/nohay.jpg');
               }
-               
+              $("#ven").attr("disabled",false);
               
             }
             
@@ -175,7 +175,7 @@
             $("#nombre").val("");
              $("#descripcion").val("");
             $("#imagen").attr("");
-
+            $("#ven").attr("disabled",true);
              var data = [];
           $("td.total").each(function(){
          data.push(parseFloat($(this).text()));
