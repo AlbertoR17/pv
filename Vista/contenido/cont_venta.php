@@ -168,13 +168,13 @@
             var cantidad=$("#cantidad").val();
             var  id = $("#IdPro").val();
             var monto=cantidad*precio;
-            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center' style='display:none'>"+id+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs eliminar'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
+            $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center' style='display:none'>"+id+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs eliminar' onclick='eliminar();'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
             $("#codigo").val("");
             $("#cantidad").val("");
             $("#precioU").val("");
             $("#nombre").val("");
              $("#descripcion").val("");
-            $("#imagen").attr("");
+            $("#imagen").removeAttr('src');
             $("#ven").attr("disabled",true);
              var data = [];
           $("td.total").each(function(){
@@ -187,16 +187,20 @@
            
            
          }
-   $(function(){
-  $(document).ready(function(){
-  // Evento que selecciona la fila y la elimina
-  $(document).on("click",".eliminar",function(){
-  var parent = $(this).parents().parents().get(0);
-      $(parent).remove();
-        
-        });
-       });
-        });
+   function eliminar(){
+
+      $(document).on('click', '.eliminar', function (event) {
+    event.preventDefault();
+    $(this).closest('tr').remove();
+    var data = [];
+     $("td.total").each(function(){
+         data.push(parseFloat($(this).text()));
+           });
+         var suma = data.reduce(function(a,b){ return a+b; },0);
+         $("#suma").html(suma);
+     });
+
+   }
 
     function cambio(){
    $(document).ready(function(){
