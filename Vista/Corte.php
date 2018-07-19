@@ -35,6 +35,7 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                     <!-- CONTENIDO DE LA PAGINA -->
+                    
                         <?php include('contenido/cont_corte.php'); ?>
                     <!-- _______________________ -->
                     </div>

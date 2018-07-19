@@ -9,7 +9,7 @@
 				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
 				<input type="text" readonly name="fecha" id="fecha" value = "<?php
 				date_default_timezone_set("America/Mexico_City");
-				echo $fe ?>" class="form-control" >
+				echo date('Y-m-d')?>" class="form-control" >
 			</div>
 		</div>
 		<label class="col-sm-2 control-label">Total de ventas</label>

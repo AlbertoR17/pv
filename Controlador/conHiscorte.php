@@ -5,11 +5,11 @@ require('conec.php');
                        while($row = mysqli_fetch_array($rs)){
 
                           echo "<tr'>"; 
-                          $aidi=$row['Id_Corte']; 
+                          $aidi=$row['Fecha']; 
                           echo "<td>" . $row['Fecha'] .  "</td>";
                           echo "<td> ". $row['Totalsis'] . "</td>";
                           echo "<td> ". $row['TotalReal'] . "</td>"; 
-                          echo "<td> <input type='submit' class='btn btn-primary' name='' value='Ver detalles'></td>"; 
+                          //echo "<td><a class='btn btn-primary' href='detallescorte.php?f=".$aidi."'>Ver detalles</a></td>"; 
                           
 
 

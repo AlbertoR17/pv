@@ -1,7 +1,7 @@
 <div class="ibox-content">
 	<fieldset>
 		<legend>Historial</legend>
-    
+
     <input type="text" class="form-control input-sm m-b-xs" id="filter"
     placeholder="Buscar...">
     <br>
@@ -11,8 +11,7 @@
          <th >Fecha</th>
          <th >Total del sistema</th>
          <th >Total real</th>
-         <th >Acción</th>
-         
+         <!-- <th >Acción</th> -->
        </tr>
      </thead>
      <tbody>
@@ -29,9 +28,9 @@
       </tr>
     </tfoot>
   </table>
-  
 
-  
+
+
 
 
 
