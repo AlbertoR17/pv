@@ -1,41 +1,7 @@
-<?php require('../Controlador/conCorte.php'); ?>
 <div class="ibox-content">
 	<fieldset>
-		<legend>Corte</legend>
-<form method="POST" action="../Controlador/regCorte.php">
-		<label class="col-sm-2 control-label">Fecha</label>
-		<div class="form-group col-sm-10" id="data_1">
-			<div class="input-group ">
-				<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-				<input type="text" readonly name="fecha" id="fecha" value = "<?php
-				date_default_timezone_set("America/Mexico_City");
-				echo $fe ?>" class="form-control" >
-			</div>
-		</div>
-		<label class="col-sm-2 control-label">Total de ventas</label>
-		<div class="form-group col-sm-10" id="data_1">
-			<div class="input-group ">
-				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" readonly name="totalsis" id="totalsis" maxlength="60"  class="form-control" value="<?php echo $totaldia ?>">
-			</div>
-		</div>
-		<label class="col-sm-2 control-label">Cantidad de caja</label>
-		<div class="form-group col-sm-10" id="data_1">
-			<div class="input-group ">
+		<legend>Historial</legend>
 
-				<span class="input-group-addon"><i class="fa fa-money"></i></span>
-				<input type="number" autocomplete="off" name="totalreal" id="totalreal" maxlength="60"  class="form-control">
-			</div>
-		</div>
-    
-
-		<div class="form-group pull-right" id="data_1">
-			<div class="input-group "><br>
-				<input type="submit" class=" btn btn-primary" value="Terminar corte">
-			</div>
-		</div>
-    
-		</form>
 		
 		
 
