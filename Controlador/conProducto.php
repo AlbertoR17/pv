@@ -17,7 +17,14 @@ require('conec.php');
                           echo "<td> ". $row['Categoria'] . "</td>"; 
                           //href ha productos con el id
                           //meter codigo php para guardar el id y poner el modal abajo
-                          echo "<td><a id='custId' class='btn btn-default'  data-toggle='modal' href='#exampleModal' data-id=".$row['Id_Producto']." >". $row['Cantidad'] . "</a> </td>"; 
+                          if ($row['Cantidad']>5) {
+                            echo "<td><a id='custId' class='btn btn-primary'  data-toggle='modal' href='#exampleModal' data-id=".$row['Id_Producto']." >". $row['Cantidad'] . "</a> </td>"; 
+                          }elseif($row['Cantidad']<=5 && $row['Cantidad']>=1){
+                            echo "<td><a id='custId' class='btn btn-warning'  data-toggle='modal' href='#exampleModal' data-id=".$row['Id_Producto']." >". $row['Cantidad'] . "</a> </td>"; 
+                          }else{
+                             echo "<td><a id='custId' class='btn btn-danger'  data-toggle='modal' href='#exampleModal' data-id=".$row['Id_Producto']." >". $row['Cantidad'] . "</a> </td>"; 
+                          }
+                          
                  
                             
 
