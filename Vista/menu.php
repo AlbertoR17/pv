@@ -19,7 +19,7 @@
         <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-usd"></i> Cortes <span class="caret"></span></a>
         <ul role="menu" class="dropdown-menu">
             <li><a href="Corte.php"><i class="fa fa-calculator"></i> Realizar corte</a></li>
-            <li><a href="Corte.php"><i class="fa fa-history"></i> Historial de cortes</a></li>
+            <li><a href="Hiscorte.php"><i class="fa fa-history"></i> Historial de cortes</a></li>
         </ul>
     </li>
     <li class="dropdown">
