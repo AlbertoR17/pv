@@ -56,8 +56,7 @@ $fecha=$_GET['f'];
     <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
       <thead>
         <tr>
-         <th data-hide="all">Fecha</th>
-         <th >Total</th>
+         <th >Totales</th>
          
        </tr>
      </thead>

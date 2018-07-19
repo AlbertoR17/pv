@@ -11,7 +11,7 @@
          <th >Fecha</th>
          <th >Total del sistema</th>
          <th >Total real</th>
-         <!-- <th >Acción</th> -->
+         <th >Acción</th> 
        </tr>
      </thead>
      <tbody>

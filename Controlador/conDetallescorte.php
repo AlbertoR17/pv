@@ -6,9 +6,9 @@ while($row = mysqli_fetch_array($rs)){
 
   echo "<tr'>"; 
   $aidi=$row['Id_Venta']; 
-  echo "<td>" . $row['Fecha'] .  "</td>";
+  //echo "<td>" . $row['Fecha'] .  "</td>";
   echo "<td> ". $row['Total'] . "</td>"; 
-  echo "<td>  </td>"; 
+  echo "<td> <button type='button' class='btn btn-primary'> Ver más</button> </td>"; 
 
 
 
