@@ -1,9 +1,37 @@
 <div class="ibox-content">
 	<fieldset>
 		<legend>Historial</legend>
+    
+    <input type="text" class="form-control input-sm m-b-xs" id="filter"
+    placeholder="Buscar...">
+    <br>
+    <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+      <thead>
+        <tr>
+         <th >Fecha</th>
+         <th >Total del sistema</th>
+         <th >Total real</th>
+         <th >Acción</th>
+         
+       </tr>
+     </thead>
+     <tbody>
+       <?php 
 
-		
-		
+       require('../Controlador/conHiscorte.php');
+       ?>
+     </tbody>
+     <tfoot>
+      <tr>
+        <td colspan="5">
+          <ul class="pagination pull-right"></ul>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  
+
+  
 
 
 
@@ -13,7 +41,7 @@
 
 
 
-	</fieldset>
+</fieldset>
 </div>
 
 
