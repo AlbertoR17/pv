@@ -3,7 +3,7 @@
 
 </div>
 <div class="ibox-content">
-    <form class="form-horizontal" method="post" action="../Controlador/regProducto.php">
+    <form class="form-horizontal" method="post" action="../Controlador/regProducto.php" enctype="multipart/form-data">
       <div class="form-group"><label class="col-sm-2 control-label">Codigo producto</label>
         <div class="col-sm-10"><input type="number" required   name="codpro" onkeypress="return validanum(event)" value="" class="form-control" autofocus></div>
     </div>
@@ -38,7 +38,7 @@
 
     <!-- <div class="form-group"><label class="col-sm-2 control-label">Cantidad</label>
         <div class="col-sm-10"><input type="text" name="cant"  value="" class="form-control"></div>
-    </div> 
+    </div> -->
     <div class="form-group"><label class="col-sm-2 control-label">Imagen</label>
         <div class="col-sm-10">
     <div class="fileinput fileinput-new input-group" data-provides="fileinput">
@@ -49,12 +49,12 @@
     <span class="input-group-addon btn btn-default btn-file">
         <span class="fileinput-new">Seleccionar archivo</span>
         <span class="fileinput-exists">Cargar</span>
-        <input type="file" name="..."/>
+        <input type="file" name="im"/>
     </span>
     <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Cambiar</a>
 </div> 
 </div>
-    </div>
+  <!--  </div>
     <div class="form-group col-lg-4 fileinput fileinput-new" data-provides="fileinput">
                 <span class="btn btn-primary btn-file"><span class="fileinput-new">Seleccionar imagen</span>
                 <span class="fileinput-exists">Cambiar</span>

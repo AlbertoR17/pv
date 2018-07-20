@@ -8,7 +8,13 @@ $nombre=$_POST['nombre'];
 $precio=$_POST['precio'];
 $descripcion=$_POST['descripcion'];
 $cat=$_POST['cat'];
-$imagen="holi";
+//$imagen="im";
+
+$destino="../Content/Productos/";
+$imagens=$_FILES['im']['tmp_name'];
+$nomimagen=$_FILES['im']['name'];
+$ext= pathinfo($nomimagen);
+move_uploaded_file($imagens, $destino."/".$codpro.".".$ext['extension']);
 //$cant=$_POST['cant'];
 /*
 echo $codpro;
@@ -43,7 +49,7 @@ if (mysqli_num_rows($resultado)>0) {
 }else{
 
 	$q= "INSERT INTO productos (Id_Producto,Codigo,Nombre,Precio_Unitario,Descripcion,Imagen,Categoria) 
-				  values ('','$codpro','$nombre','$precio','$descripcion','$imagen', '$cat')";
+				  values ('','$codpro','$nombre','$precio','$descripcion','$codpro', '$cat')";
 
 $ejecuta_q= mysqli_query($con,$q) or die("aaaaaaa");
 
