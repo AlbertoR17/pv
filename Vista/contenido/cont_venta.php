@@ -212,6 +212,9 @@
            });
          var suma = data.reduce(function(a,b){ return a+b; },0);
          $("#suma").html(suma);
+         if (suma==0) {
+          $("#terminar").attr("disabled",true);
+         }
      });
 
    }
