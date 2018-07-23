@@ -42,7 +42,7 @@
 
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <a href="#">
+                        <a href="../Controlador/Salir.php">
                             <i class="fa fa-sign-out"></i> Salir
                         </a>
                     </li>

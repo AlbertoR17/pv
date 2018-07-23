@@ -30,10 +30,10 @@
                     <form class="m-t" method="POST" role="form" action="../Vista/validarUsuario.php">
                         <center></center>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Usuario" required="" style="text-align: center;">
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Usuario" autocomplete="off" required="" style="text-align: center;">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Contraseña" required=""style="text-align: center;">
+                            <input type="password" autocomplete="off" class="form-control" name="contrasena" id="contrasena" placeholder="Contraseña" required=""style="text-align: center;">
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
 
