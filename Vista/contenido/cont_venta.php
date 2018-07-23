@@ -11,6 +11,7 @@
                    
                 </div>
             </div>
+
             <div class="ibox-content">
               <div class="row">
               <div class="col-md-6">
@@ -19,6 +20,7 @@
                     <label class="control-label" for="order_id">Codigo del Producto</label>
                     <input type="text" id="codigo"  value="" placeholder="Codigo del producto" class="form-control" onchange='buscar_articulo();'>
                     <input type="text" id="IdPro"  value="" class="form-control" style="display: none;">
+
                       <br>
                     <label class="control-label" for="order_id">Producto</label>
                     <input type="text" id="nombre"  value=""  placeholder="Producto" class="form-control nombre" readonly="">

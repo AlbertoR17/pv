@@ -1,7 +1,12 @@
+<?php 
+session_start();
+
+?>
+
 <html>
 
 
-<!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:36:08 GMT -->
+
 <head>
 
     <meta charset="utf-8">
@@ -35,7 +40,9 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Ventas</h5>
+                            <h1><b><span class="text-navy">Bienvenido</span></b> <?php echo $_SESSION["Nombre"];  ?></h1>
+
+                            
                         </div>
                         <div class="ibox-content">
                             Holis aqui ventas

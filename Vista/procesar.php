@@ -1,9 +1,10 @@
 <?php 
-
+session_start();
 require('conec.php');
 
 $suma=$_POST['suma'];
-$query= mysqli_query($con,"INSERT INTO venta (Id_Venta,Total,Fecha) values ('','$suma',now())");
+$id=$_SESSION["id"];
+$query= mysqli_query($con,"INSERT INTO venta (Id_Venta,Total,Fecha,Usuario) values ('','$suma',now(),'$id')");
 
 /*$rs = mysqli_query($con, "SELECT * FROM venta");
     $row = mysqli_fetch_array($rs);
