@@ -31,7 +31,7 @@
             <option value="Carnes">Carnes</option>
             <option value="Detergentes">Detergentes</option>
             <option value="Enlatados">Enlatados</option>
-            <option value="A granel">A granel</option>           
+            <option value="A granel">A granel</option>         
           </select>
         </div>
     </div>

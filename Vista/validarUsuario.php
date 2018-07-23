@@ -4,18 +4,9 @@ require('conec.php');
 $nombre = trim($_POST['nombre']);
 $password = trim($_POST['contrasena']);
 
-
-
-if (empty($nombre) || empty($password)) {
-    header("location: ../Vista/Login.php");
-    echo "";
-    exit();
-
-}
-
 $rs  = "SELECT * FROM usuarios WHERE Nombre = '$nombre' AND Contrasena = '$password'";
-$result = mysqli_query($con, $rs);
-$row    = mysqli_fetch_assoc($result);
+$qs = mysqli_query($con, $rs);
+$row    = mysqli_fetch_assoc($qs);
 if (!isset($row)) {
     header("location: ../Vista/Login.php");
 }
@@ -54,7 +45,7 @@ if ($row["Nombre"] === $nombre && $row["Contrasena"] === $password) {
                  document.location.href = 'Login.php';
                 </script> ";
         
-        //exit();
+        
     }
 
 

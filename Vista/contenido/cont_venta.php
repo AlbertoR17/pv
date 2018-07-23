@@ -151,13 +151,22 @@
               else{
                  $("#imagen").attr('src','../Content/Productos/nohay.jpg');
               }
-              $("#ven").attr("disabled",false);
+              if (data.Categoria=="Frutas y Verduras" || data.Categoria=="A granel" ||data.Categoria=="Carnes") {
+
+                  alert("entre al if")
+                  
+                 $("#ven").attr("disabled",false);
+              }
+              else{
+                 agregar();
+              }
               
+            
             }
             
-             
+            
         });
-       
+           
          // })
          }
  function agregar(){
@@ -168,6 +177,9 @@
             var descripcion=$("#descripcion").val();
             var precio=$("#precioU").val();
             var cantidad=$("#cantidad").val();
+            if (cantidad=="") {
+                cantidad=1;
+            }
             var  id = $("#IdPro").val();
             var monto=cantidad*precio;
             $("#productos > tbody").append("<tr><td class='center'>"+produc+"</td><td class='center'>"+descripcion+"</td><td class='center'>"+precio+"</td><td class='center'>"+cantidad+"</td><td class='total'>"+monto.toFixed(2)+"</td><td class='center' style='display:none'>"+id+"</td><td class='center'><button class='btn btn-block btn-danger btn-xs eliminar' onclick='eliminar();'><i class='icon-trash bigger-120'></i> Eliminar</button></td></tr>");
