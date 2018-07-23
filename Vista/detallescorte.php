@@ -99,6 +99,49 @@ $fecha=$_GET['f'];
 
         </body>
 
+<div class="modal fade" id="modalCorte" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Detalles de la Venta</h4>
+            </div>
+            <div class="fetched-corte">
+           
+                
+            </div>
+         
+         
+        </div>
+    </div>
+</div>
+        <!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:36:08 GMT -->
+        </html>
+
+
+        <script type="text/javascript">
+    $(document).ready(function(){
+    $('#modalCorte').on('show.bs.modal', function (e) {
+
+        var rowid = $(e.relatedTarget).data('id');
+        // alert("El producto se ha agregado exitosamente"+ rowid);
+        $.ajax({
+            type : 'post',
+            url : '../Controlador/conDetallesCorteProductos.php', //Here you will fetch records 
+            data :  'rowid='+ rowid, //Pass $id
+            success : function(data){
+                         //alert("El producto se ha agregado exitosamente"+ rowid);
+
+                         $('.fetched-corte').html(data);
+
+           //$('#modal-content').html('<p><sdgtdrsyreyhrytys/p>');//Show fetched data from database
+             //alert("El producto se ha agregado exitosamente");
+            }
+        });
+     });
+});
+</script>
+
 
         <!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:36:08 GMT -->
         </html>
