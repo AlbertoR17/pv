@@ -153,7 +153,7 @@
               }
               if (data.Categoria=="Frutas y Verduras" || data.Categoria=="A granel" ||data.Categoria=="Carnes") {
 
-                  alert("entre al if")
+                  //alert("entre al if")
                   
                  $("#ven").attr("disabled",false);
               }
