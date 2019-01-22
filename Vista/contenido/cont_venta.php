@@ -96,7 +96,7 @@
             </div>
             <div class="ibox-content">
 
-                <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15" id="productos">
+                <table  id="productos">
                     <thead>
                         <tr>
 
@@ -248,11 +248,12 @@
             data: {suma:sum},
             success: function(data){
               
+
             }
              
         });
-          inser();
           
+          inser();
           
                          /*$(".suma").html("");
                          $("#pago").val("");
@@ -286,12 +287,7 @@
                                    type: 'success',
                                    timeout: 2000,
                                   });
-                               /*if(yapuso==0){
-                               llena_ticket_archivo(cod,can,preciou,descripcion_art,yapuso,monto,$("#totales").html(),$("#paga_con").val(),$("#el_cambio").val(),n_tic);
-                               yapuso=1;
-                               }else{
-                               llena_ticket_archivo(cod,can,preciou,descripcion_art,yapuso,monto,$("#totales").html(),$("#paga_con").val(),$("#el_cambio").val(),n_tic);
-                               }*/
+                               
                               },
                              error: function(jqXHR,estado,error){
                                $("#errores").html('Error... ');
@@ -302,6 +298,12 @@
           $(".suma").html("");
           $("#pago").val("");
           $(".cambio").html("");
+          id="";
+          descripcion="";
+          proc="";
+          can="";
+          preciou="";
+          monto="";
           $("#tbody").empty();
           
       });

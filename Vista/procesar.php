@@ -9,5 +9,4 @@ $query= mysqli_query($con,"INSERT INTO venta (Id_Venta,Total,Fecha,Usuario) valu
 
 mysqli_close($con);
 
-
  ?>
